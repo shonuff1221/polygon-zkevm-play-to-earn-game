@@ -9,7 +9,7 @@ export function ClaimFarmer() {
     return (
         <Container maxW={"1200px"}>
             <Flex direction={"column"} alignItems={"center"} justifyContent={"center"} h={"50vh"}>
-                <Heading>Claim Farmer to start farming</Heading>
+                <Heading>Join A Team to start farming</Heading>
                 <Box borderRadius={"8px"} overflow={"hidden"} my={10}>
                     <MediaRenderer
                         src={metadata?.image}
@@ -21,7 +21,18 @@ export function ClaimFarmer() {
                 <Web3Button
                     contractAddress={FARMER_ADDRESS}
                     action={(contract) => contract.erc1155.claim(0, 1)}
-                >Claim Farmer</Web3Button>
+                >Join Dev</Web3Button>
+                <Box borderRadius={"8px"} overflow={"hidden"} my={10}>
+                    <MediaRenderer
+                        src={metadata?.image}
+                        height="300px"
+                        width="300px"
+                    />
+                </Box>
+                <Web3Button
+                    contractAddress={FARMER_ADDRESS}
+                    action={(contract) => contract.erc1155.claim(1, 1)}
+                >Join Stunna</Web3Button>
             </Flex>
         </Container>
     );

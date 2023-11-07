@@ -43,12 +43,12 @@ export const Equipped = (props: EquippedProps) => {
                         </Stack>
                     </Flex>
                     <Box mt={5}>
-                        <Text>Claimable $CARROT:</Text>
+                        <Text>Claimable $SQP:</Text>
                         <Text>{ethers.utils.formatUnits(claimableRewards[1], 18)}</Text>
                         <Web3Button
                             contractAddress={STAKING_ADDRESS}
                             action={(contract) => contract.call("claimRewards", [props.tokenId])}
-                        >Claim $CARROT</Web3Button>
+                        >Claim $SQP</Web3Button>
                     </Box>
                 </Card>
             )}
